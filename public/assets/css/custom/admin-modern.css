@@ -1,0 +1,640 @@
+/* Admin modern dark theme for Kelurahan Dunguscariang */
+:root {
+    --admin-bg: #0d0d16;
+    --admin-panel: #0f0f1a;
+    --admin-panel-2: #16162a;
+    --admin-border: rgba(34, 34, 64, 0.85);
+    --admin-border-soft: rgba(34, 34, 64, 0.55);
+    --admin-text: #a9abbd;
+    --admin-muted: #76788c;
+    --admin-white: #ffffff;
+    --admin-emerald: #10b981;
+    --admin-emerald-dark: #047857;
+    --admin-danger: #fb7185;
+    --admin-warning: #fbbf24;
+    --admin-blue: #60a5fa;
+    --admin-purple: #c084fc;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body.admin-modern {
+    background: var(--admin-bg) !important;
+    color: var(--admin-text) !important;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body.admin-modern #app {
+    background: var(--admin-bg) !important;
+    min-height: 100vh;
+}
+
+body.admin-modern #main {
+    background:
+        radial-gradient(circle at top right, rgba(16,185,129,0.08), transparent 34rem),
+        linear-gradient(180deg, #0d0d16 0%, #09090e 100%) !important;
+    min-height: 100vh;
+    color: var(--admin-text);
+}
+
+body.admin-modern .admin-topbar {
+    min-height: 5rem;
+    background: rgba(15,15,26,0.98);
+    border-bottom: 1px solid var(--admin-border-soft);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+
+body.admin-modern .admin-status-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: var(--admin-emerald);
+    box-shadow: 0 0 0 4px rgba(16,185,129,0.12);
+    display: inline-block;
+}
+
+body.admin-modern .admin-shell {
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    body.admin-modern .admin-shell {
+        padding: 2rem;
+    }
+}
+
+body.admin-modern .admin-page-banner,
+body.admin-modern .modern-banner {
+    background: linear-gradient(90deg, rgba(15,15,26,0.95), rgba(15,15,26,0.35));
+    border: 1px solid var(--admin-border-soft);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.16);
+    margin-bottom: 1.5rem;
+}
+
+body.admin-modern .page-heading,
+body.admin-modern .page-content,
+body.admin-modern .section {
+    color: var(--admin-text) !important;
+}
+
+body.admin-modern .page-heading > .page-title,
+body.admin-modern .page-heading > h3,
+body.admin-modern .page-heading > .page-content,
+body.admin-modern .page-heading > .section {
+    margin-left: 0 !important;
+}
+
+body.admin-modern .page-title .row,
+body.admin-modern .page-heading > h3 {
+    background: linear-gradient(90deg, rgba(15,15,26,0.95), rgba(15,15,26,0.35));
+    border: 1px solid var(--admin-border-soft);
+    border-radius: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.16);
+}
+
+body.admin-modern .page-title h3,
+body.admin-modern .page-heading h3,
+body.admin-modern h1,
+body.admin-modern h2,
+body.admin-modern h3,
+body.admin-modern h4,
+body.admin-modern h5,
+body.admin-modern h6 {
+    color: var(--admin-white) !important;
+}
+
+body.admin-modern .text-muted,
+body.admin-modern .text-subtitle,
+body.admin-modern small {
+    color: var(--admin-muted) !important;
+}
+
+body.admin-modern .card {
+    background: var(--admin-panel) !important;
+    border: 1px solid var(--admin-border-soft) !important;
+    border-radius: 1.5rem !important;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.16) !important;
+    color: var(--admin-text) !important;
+    overflow: hidden;
+}
+
+body.admin-modern .card-header {
+    background: transparent !important;
+    border-bottom: 1px solid var(--admin-border-soft) !important;
+    color: var(--admin-white) !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+body.admin-modern .card-body {
+    color: var(--admin-text) !important;
+}
+
+body.admin-modern .table {
+    color: var(--admin-text) !important;
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--admin-text);
+    --bs-table-border-color: var(--admin-border-soft);
+    --bs-table-striped-bg: rgba(22,22,42,0.35);
+    --bs-table-hover-bg: rgba(22,22,42,0.65);
+}
+
+body.admin-modern .table thead th {
+    background: rgba(9,9,14,0.72) !important;
+    color: #8e8fa1 !important;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-color: var(--admin-border-soft) !important;
+    padding: 1rem !important;
+}
+
+body.admin-modern .table tbody td {
+    border-color: rgba(34,34,64,0.45) !important;
+    padding: 1rem !important;
+    vertical-align: middle;
+}
+
+body.admin-modern .table tbody tr:hover {
+    background: rgba(22,22,42,0.55) !important;
+}
+
+body.admin-modern .table-responsive {
+    border-radius: 1.25rem;
+}
+
+body.admin-modern .form-control,
+body.admin-modern .form-select,
+body.admin-modern select,
+body.admin-modern textarea,
+body.admin-modern input[type="text"],
+body.admin-modern input[type="email"],
+body.admin-modern input[type="password"],
+body.admin-modern input[type="number"],
+body.admin-modern input[type="date"] {
+    background-color: #09090e !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-white) !important;
+    border-radius: 0.9rem !important;
+    box-shadow: none !important;
+}
+
+body.admin-modern .form-control:focus,
+body.admin-modern .form-select:focus,
+body.admin-modern textarea:focus,
+body.admin-modern input:focus {
+    border-color: rgba(16,185,129,0.8) !important;
+    box-shadow: 0 0 0 0.2rem rgba(16,185,129,0.12) !important;
+}
+
+body.admin-modern label,
+body.admin-modern .form-label {
+    color: #d7d8e4 !important;
+    font-weight: 700;
+}
+
+body.admin-modern .btn {
+    border-radius: 0.85rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.01em;
+}
+
+body.admin-modern .btn-primary,
+body.admin-modern .btn-outline-primary:hover {
+    background: linear-gradient(135deg, #047857, #10b981) !important;
+    border-color: transparent !important;
+    color: white !important;
+    box-shadow: 0 12px 24px rgba(16,185,129,0.18) !important;
+}
+
+body.admin-modern .btn-outline-primary {
+    border-color: rgba(16,185,129,0.45) !important;
+    color: #6ee7b7 !important;
+}
+
+body.admin-modern .btn-outline-success {
+    border-color: rgba(16,185,129,0.45) !important;
+    color: #6ee7b7 !important;
+}
+
+body.admin-modern .btn-outline-secondary {
+    border-color: rgba(148,163,184,0.35) !important;
+    color: #cbd5e1 !important;
+}
+
+body.admin-modern .btn-outline-warning {
+    border-color: rgba(251,191,36,0.45) !important;
+    color: #fbbf24 !important;
+}
+
+body.admin-modern .btn-outline-danger {
+    border-color: rgba(251,113,133,0.45) !important;
+    color: #fb7185 !important;
+}
+
+body.admin-modern .btn-danger {
+    background: #be123c !important;
+    border-color: #be123c !important;
+}
+
+body.admin-modern .btn-success {
+    background: #059669 !important;
+    border-color: #059669 !important;
+}
+
+body.admin-modern .btn-info {
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+    color: white !important;
+}
+
+body.admin-modern .alert {
+    border-radius: 1rem;
+    border: 1px solid var(--admin-border-soft);
+}
+
+body.admin-modern .alert-info {
+    color: #bfdbfe;
+    background: rgba(59,130,246,0.12);
+    border-color: rgba(59,130,246,0.25);
+}
+
+body.admin-modern .badge {
+    border-radius: 999px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+body.admin-modern .modal-content {
+    background: var(--admin-panel) !important;
+    border: 1px solid var(--admin-border) !important;
+    color: var(--admin-text) !important;
+    border-radius: 1.5rem !important;
+}
+
+body.admin-modern .modal-header,
+body.admin-modern .modal-footer {
+    border-color: var(--admin-border-soft) !important;
+}
+
+body.admin-modern .pagination .page-link {
+    background: #09090e !important;
+    color: #cbd5e1 !important;
+    border-color: var(--admin-border-soft) !important;
+}
+
+body.admin-modern .pagination .active .page-link,
+body.admin-modern .page-item.active .page-link {
+    background: #047857 !important;
+    border-color: #047857 !important;
+    color: white !important;
+}
+
+/* Sidebar */
+body.admin-modern #sidebar.active .sidebar-wrapper,
+body.admin-modern .sidebar-wrapper {
+    background: var(--admin-panel) !important;
+    border-right: 1px solid var(--admin-border-soft) !important;
+    box-shadow: 18px 0 50px rgba(0,0,0,0.16);
+}
+
+body.admin-modern .sidebar-header {
+    border-bottom: 1px solid var(--admin-border-soft) !important;
+    padding: 1.1rem 1.25rem !important;
+}
+
+body.admin-modern .sidebar-brand-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+body.admin-modern .sidebar-brand-icon {
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(135deg, #047857, #10b981);
+    box-shadow: 0 14px 30px rgba(16,185,129,0.15);
+}
+
+body.admin-modern .sidebar-brand-title {
+    color: var(--admin-white);
+    font-size: 0.95rem;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+body.admin-modern .sidebar-brand-subtitle {
+    color: #34d399;
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+body.admin-modern .sidebar-menu .menu .sidebar-title {
+    color: #5b5d70 !important;
+    font-size: 0.66rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+body.admin-modern .sidebar-menu .menu .sidebar-link {
+    color: #8e8fa1 !important;
+    border-radius: 0.95rem !important;
+    margin: 0.25rem 0.75rem !important;
+    padding: 0.85rem 1rem !important;
+    font-weight: 800;
+    transition: all 0.18s ease-in-out;
+}
+
+body.admin-modern .sidebar-menu .menu .sidebar-link:hover {
+    background: var(--admin-panel-2) !important;
+    color: var(--admin-white) !important;
+}
+
+body.admin-modern .sidebar-menu .menu .sidebar-item.active > .sidebar-link {
+    color: var(--admin-white) !important;
+    background: linear-gradient(135deg, #047857, #10b981) !important;
+    box-shadow: 0 16px 28px rgba(16,185,129,0.16) !important;
+}
+
+body.admin-modern .sidebar-menu .menu .sidebar-link i,
+body.admin-modern .sidebar-menu .menu .sidebar-link svg {
+    color: inherit !important;
+}
+
+body.admin-modern .sidebar-user-card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--admin-border-soft);
+    background: rgba(9,9,14,0.55);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+body.admin-modern .sidebar-user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.9rem;
+    background: #222240;
+    color: #34d399;
+    flex-shrink: 0;
+}
+
+body.admin-modern .logout-button-modern {
+    background: transparent;
+    border: 0;
+    color: #fb7185;
+    width: calc(100% - 1.5rem);
+    margin: 0.25rem 0.75rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 800;
+}
+
+body.admin-modern .logout-button-modern:hover {
+    background: rgba(190,18,60,0.15);
+    color: white;
+}
+
+/* Dashboard widgets */
+.admin-metric-card {
+    background: var(--admin-panel);
+    border: 1px solid var(--admin-border-soft);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.16);
+    transition: all 0.18s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.admin-metric-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(16,185,129,0.35);
+}
+
+.admin-metric-icon {
+    width: 3.35rem;
+    height: 3.35rem;
+    border-radius: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.admin-metric-card h3 {
+    color: white;
+    font-weight: 900;
+    margin: 0.15rem 0 0 0;
+    font-size: 1.55rem;
+}
+
+.admin-metric-label {
+    color: #76788c;
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.admin-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    padding: 0.28rem 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.admin-panel {
+    background: var(--admin-panel);
+    border: 1px solid var(--admin-border-soft);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.16);
+}
+
+.admin-section-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0;
+}
+
+.admin-progress {
+    height: 0.55rem;
+    background: #222240;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.admin-progress > span {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #047857, #10b981);
+}
+
+/* DataTables dark adjustment */
+body.admin-modern .dataTables_wrapper .dataTables_filter input,
+body.admin-modern .dataTables_wrapper .dataTables_length select {
+    background: #09090e !important;
+    color: white !important;
+    border: 1px solid var(--admin-border) !important;
+    border-radius: 0.75rem !important;
+}
+
+body.admin-modern .dataTables_wrapper .dataTables_info,
+body.admin-modern .dataTables_wrapper .dataTables_filter label,
+body.admin-modern .dataTables_wrapper .dataTables_length label {
+    color: var(--admin-text) !important;
+}
+
+body.admin-modern .dropdown-menu {
+    background: var(--admin-panel) !important;
+    border: 1px solid var(--admin-border-soft) !important;
+    border-radius: 1rem !important;
+}
+
+body.admin-modern .dropdown-item {
+    color: var(--admin-text) !important;
+}
+
+body.admin-modern .dropdown-item:hover {
+    background: var(--admin-panel-2) !important;
+    color: white !important;
+}
+
+/* Login page */
+body.admin-login-modern {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(16,185,129,0.20), transparent 28rem),
+        radial-gradient(circle at 85% 80%, rgba(4,120,87,0.28), transparent 30rem),
+        #09090e;
+    color: var(--admin-text);
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.login-modern-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.login-modern-card {
+    width: 100%;
+    max-width: 28rem;
+    background: rgba(15,15,26,0.92);
+    border: 1px solid var(--admin-border-soft);
+    border-radius: 1.75rem;
+    box-shadow: 0 28px 80px rgba(0,0,0,0.32);
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.login-modern-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 0.5rem;
+    background: linear-gradient(90deg, #047857, #10b981);
+}
+
+.login-modern-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #047857, #10b981);
+    color: white;
+    box-shadow: 0 16px 36px rgba(16,185,129,0.18);
+}
+
+.login-modern-card .form-control {
+    min-height: 3.4rem;
+}
+
+.login-modern-card .btn-login-modern {
+    width: 100%;
+    min-height: 3.35rem;
+    border: 0;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #047857, #10b981);
+    color: white;
+    font-weight: 900;
+    box-shadow: 0 16px 36px rgba(16,185,129,0.18);
+}
+
+@media (max-width: 1199.98px) {
+    body.admin-modern .admin-topbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+body.admin-login-modern .form-control {
+    background-color: #09090e !important;
+    border: 1px solid rgba(34,34,64,0.85) !important;
+    color: #ffffff !important;
+    border-radius: 1rem !important;
+    box-shadow: none !important;
+}
+
+body.admin-login-modern .form-control:focus {
+    border-color: rgba(16,185,129,0.8) !important;
+    box-shadow: 0 0 0 0.2rem rgba(16,185,129,0.12) !important;
+}
+
+body.admin-login-modern .form-label {
+    color: #d7d8e4 !important;
+    font-weight: 800;
+}
+
+.fw-black { font-weight: 900 !important; }
+.min-width-0 { min-width: 0; }
